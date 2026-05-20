@@ -1,0 +1,12 @@
+import pandas as pd
+stock1=pd.Series([120, 80, None , 60, 95, None , 110])
+stock2=pd.Series(data=[120, 80, None , 60, 95, None , 110],index=["Apple", "Banana", "Orange", "Mango", "Grape", "Peach", "Melon" ])
+stock3=stock2.to_dict()
+c=(stock2.isnull().sum())
+print("stock1\n",stock1)
+print("stock2\n",stock2)
+print("stock3\n",stock3)
+print("缺失值檢查:\n")
+print(stock2.isnull())
+print("缺失值數量:\n",c)
+stock2.to_csv("0520_stock.csv")
