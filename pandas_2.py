@@ -16,8 +16,8 @@ data2=[
 ]
 df2=pd.DataFrame(data2,columns=["name","age","score"])
 print(df2)
-print("字典模式前5筆",df1.head())
-print("字典模式後五筆",df1.tail())
-print("列表模式前5筆",df2.head())
-print("列表模式後五筆",df2.tail())
-print(df2.info())
+
+print(df1.info())
+s=(df1.describe().round(2))
+print(df1.describe().round(2))
+s.to_csv("0520_stock2.csv")
